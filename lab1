@@ -1,0 +1,18 @@
+# a. Display "Welcome to Python" five times
+for i in range(5):
+    print("Welcome to Python")
+
+print("\n")  # For spacing
+
+# b. Display the table with a, a^2, and a^3
+print("a\ta^2\ta^3")
+for a in range(1, 5):
+    print(f"{a}\t{a**2}\t{a**3}")
+
+print("\n")  # For spacing
+
+# c. Display the result of the expression
+numerator = (9.5 * 4.5) - (2.5 * 3)
+denominator = 45.5 - 3.5
+result = numerator / denominator
+print("Result:", result)
