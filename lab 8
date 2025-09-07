@@ -1,0 +1,24 @@
+post  lab 1 question 
+import math
+def degree_to_radian(degree):
+    return degree * math.pi / 180
+degree = float(input("Enter angle in degrees: "))
+radian = degree_to_radian(degree)
+print(f"{degree} degrees is {radian:.6f} radians")
+post lab 2 question
+import math
+x = float(input("Enter value of x: "))
+y = 6 * x**2 + 4 * math.sin(x)
+print(f"y = {y:.6f}")
+post lab 3 question 
+import math
+def evaluate_functions(x):
+    f = math.cos(2 * x)
+    f_prime = -2 * math.sin(2 * x)
+    f_double_prime = -4 * math.cos(2 * x)
+    return f, f_prime, f_double_prime
+x_value = math.pi
+results = evaluate_functions(x_value)
+print(f"f(π) = {results[0]}")
+print(f"f'(π) = {results[1]}")
+print(f"f''(π) = {results[2]}")
