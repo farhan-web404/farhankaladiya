@@ -1,0 +1,37 @@
+post lab 1 question 
+def reverse_string(s):
+    return s[::-1]
+input_string = "Hello, World!"
+reversed_string = reverse_string(input_string)
+print(reversed_string)
+post lab 2 question 
+def is_palindrome(s):
+    return s == s[::-1]
+input_string = "madam"
+if is_palindrome(input_string):
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+post lab 3 question 
+def is_all_digits(s):
+    return s.isdigit()
+input_string = "123456"
+if is_all_digits(input_string):
+    print("The string contains only digits.")
+else:
+    print("The string contains non-digit characters.")
+post lab 4 question
+def longest_word(sentence):
+    words = sentence.split()
+    return max(words, key=len)
+input_sentence = "I love programming in Python"
+longest = longest_word(input_sentence)
+print("The longest word is:", longest)
+post lab 5 question 
+def length_of_last_word(sentence):
+    words = sentence.split()
+    return len(words[-1])
+input_sentence = "Hello World"
+last_word_length = length_of_last_word(input_sentence)
+print("The length of the last word is:", last_word_length)
+
