@@ -1,0 +1,58 @@
+post lab 1 question 
+def calculate_rectangle_properties(length, width):
+    area = length * width
+    perimeter = 2 * (length + width)
+    return area, perimeter
+try:
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    area, perimeter = calculate_rectangle_properties(length, width)
+    print(f"\n📐 Rectangle Dimensions:")
+    print(f"Length: {length}")
+    print(f"Width: {width}")
+    print(f"Area: {area}")
+    print(f"Perimeter: {perimeter}")
+except ValueError:
+    print("⚠️ Please enter valid numerical values for length and width.")
+post lab 2 question
+def check_even_odd(number):
+    if number % 2 == 0:
+        return f"{number} is even."
+    else:
+        return f"{number} is odd."
+num = int(input("Enter a number: "))
+print(check_even_odd(num))
+post lab 3 question 
+def calculate_cube_properties(side_length):
+    surface_area = 6 * (side_length ** 2)
+    volume = side_length ** 3
+    return surface_area, volume
+side = float(input("Enter the side length of the cube: "))
+surface_area, volume = calculate_cube_properties(side)
+print(f"The surface area of the cube is: {surface_area} square units.")
+print(f"The volume of the cube is: {volume} cubic units.")
+post lab  4 question 
+def calculate_z(x, y):
+    z = (x + y) * (x - y)
+    return z
+x = float(input("Enter the value of x: "))
+y = float(input("Enter the value of y: "))
+z = calculate_z(x, y)
+print(f"The value of z = (x + y) * (x - y) is: {z}")
+post lab 5 question 
+def calculate_z(x, y):
+    square_term = (x + y) ** 2 #which is the square of (x + y)
+    xy_term = 2 * x * y
+    z = square_term - xy_term # z = (x + y)^2 - 2xy
+    return z
+x = float(input("Enter the value of x: "))
+y = float(input("Enter the value of y: "))
+z = calculate_z(x, y)
+print(f"The value of z = (x + y)(x + y) - 2xy is: {z}")
+post lab 6 question 
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = celsius_to_fahrenheit(celsius)
+print(f"{celsius}°C is equal to {fahrenheit}°F")
