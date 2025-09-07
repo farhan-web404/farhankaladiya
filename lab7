@@ -1,0 +1,45 @@
+import numpy as np
+
+matrix = np.arange(2, 11).reshape(3, 3)
+print(matrix)
+
+import numpy as np
+
+# b. Reverse an array
+arr = np.array([1, 2, 3, 4, 5])
+reversed_arr = arr[::-1]
+print("Reversed Array:", reversed_arr)
+
+# c. Find common values between two arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+common = np.intersect1d(arr1, arr2)
+print("Common Values:", common)
+
+# d. Repeat array elements
+arr = np.array([1, 2, 3])
+repeated = np.repeat(arr, 2)
+print("Repeated Elements:", repeated)
+
+# e. Find memory size of a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+memory_size = arr.nbytes
+print("Memory Size (bytes):", memory_size)
+
+# f. Create an array of ones and zeros
+zeros_array = np.zeros(5)
+ones_array = np.ones(5)
+print("Zeros:", zeros_array)
+print("Ones:", ones_array)
+
+# g. Find the 4th element of a specified array
+arr = np.array([10, 20, 30, 40, 50])
+fourth_element = arr[3]
+print("4th Element:", fourth_element)
+post lab 1 question 
+post lab 2 question 
+post lab 3 question 
+post lab 4 question 
+post lab 5 question 
+post lab 6 question 
+post lab 7 question 
