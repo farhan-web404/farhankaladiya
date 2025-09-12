@@ -1,0 +1,32 @@
+post lab  question 1
+fs = 1000 t = np.linspace(0, 1, fs, endpoint=False)
+f1 = 5 f2 = 10
+sine1 = np.sin(2 * np.pi * f1 * t) 
+sine2 = np.sin(2 * np.pi * f2 * t) 
+combined = sine1 + sine2
+plt.plot(t, combined) plt.title("Combined Sine
+Wave (5 Hz + 10 Hz)") plt.xlabel("Time (s)") 
+plt.ylabel("Amplitude") plt.grid(True) 
+plt.show()
+POST lab 2 question 
+t = np.linspace(0, 2, 2 * fs, endpoint=False)
+sine_wave = np.sin(2 * np.pi * 5 * t) cosine_wave = np.cos(2 * np.pi * 10 * t) product = sine_wave * cosine_wave
+plt.plot(t, product) plt.title("Element-wise Product of 5 Hz Sine and 10 Hz Cosine") plt.xlabel("Time (s)") plt.ylabel("Amplitude") plt.grid(True) 
+plt.show()
+post leb 3 question
+import numpy as np import matplotlib.pyplot as plt
+fs = 1000 t = np.linspace(0, 1, fs, endpoint=False)
+original = np.sin(2 * np.pi * 5 * t) shifted = np.sin(2 * np.pi * 5 * (t - 0.1))
+plt.plot(t, original, label="Original") plt.plot(t, shifted, label="Shifted by 0.1s", linestyle='--') plt.title("Original vs Time-Shifted 5 Hz Sine Wave") plt.xlabel("Time (s)") plt.ylabel("Amplitude") plt.legend() plt.grid(True) plt.show()
+POST LAB 4  QUESTION 
+import numpy as np import matplotlib.pyplot as plt
+fs = 1000 t = np.linspace(0, 1, fs, endpoint=False)
+original = np.sin(2 * np.pi * 10 * t) scaled = 3 * original
+plt.plot(t, original, label="Original 10 Hz Sine") plt.plot(t, scaled, label="Scaled (×3)", linestyle='--') plt.title("Original vs Scaled 10 Hz Sine Wave")
+plt.xlabel("Time (s)") plt.ylabel("Amplitude") plt.legend() plt.grid(True) plt.show()
+POST LAB 5 QUESTION
+import numpy as np import matplotlib.pyplot as plt
+fs = 1000 t = np.linspace(0, 1, fs, endpoint=False) original = np.sin(2 * np.pi * 5 * t) versed_signal = original[::-1]
+plt.plot(t, original, label="Original") plt.plot(t, reversed_signal, label="Reversed", linestyle='--') plt.title("Original vs Time-Reversed 5 Hz Sine Wave") plt.xlabel("Time (s)") plt.ylabel("Amplitude") plt.legend() plt.grid(True) plt.show() 
+
+
