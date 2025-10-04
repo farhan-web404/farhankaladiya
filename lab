@@ -1,0 +1,42 @@
+post lab onw 
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+from scipy.signal import convolve
+
+# Load audio file
+rate, audio = wavfile.read('input_audio.wav')
+
+# Use only one channel if stereo
+if len(audio.shape) > 1:
+    audio = audio[:, 0]
+
+# Define impulse response
+impulse = np.array([0.5, 1.0, 0.5])
+
+# Linear convolution
+linear_result = convolve(audio, impulse, mode='full')
+
+# Circular convolution
+N = len(audio) + len(impulse) - 1
+audio_pad = np.pad(audio, (0, N - len(audio)))
+impulse_pad = np.pad(impulse, (0, N - len(impulse)))
+circular_result = np.fft.ifft(np.fft.fft(audio_pad) * np.fft.fft(impulse_pad)).real
+
+# Plot results
+plt.figure(figsize=(12, 6))
+
+plt.subplot(3, 1, 1)
+plt.plot(audio)
+plt.title('Original Audio')
+
+plt.subplot(3, 1, 2)
+plt.plot(linear_result)
+plt.title('Linear Convolution')
+
+plt.subplot(3, 1, 3)
+plt.plot(circular_result)
+plt.title('Circular Convolution')
+
+plt.tight_layout()
+plt.show()
